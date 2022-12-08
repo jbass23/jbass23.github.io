@@ -1,0 +1,116 @@
+/* Elavon Project Page */
+main {
+    text-align: center;
+    margin: 0em;
+}
+
+h1 {
+    padding-top: 2.75em;
+    padding-bottom: 1em;
+    background-color: #4C86A8;
+    color: white;
+    border-radius: 0.5em;
+}
+
+#company-logos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+#company-logos img {
+    width: 22em;
+    height: auto;
+}
+
+#about {
+    background-color: #735D78;
+    color: white;
+    padding: 1em;
+    padding-left: 5em;
+    padding-right: 5em;
+    border-radius: 1em;
+}
+
+#las {
+    margin-top: 2.25em;
+    margin-bottom: 0.75em;
+}
+
+#las h2 {
+    margin-bottom: 2em;
+}
+
+#all-images {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+#all-images img {
+    width: 15em;
+    height: auto;
+    margin-bottom: 2em;
+}
+
+#steps-and-title {
+    background-color: #759870;
+    color: white;
+    padding: 1em;
+    padding-left: 5em;
+    padding-right: 5em;
+    border-radius: 1em;
+}
+
+#all-steps {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#step {
+    width: 18em;
+    height: auto;
+    line-height: 1.65;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#other-projects {
+    margin-top: 2.25em;
+    margin-bottom: 0.75em;
+}
+
+#other-projects h2 {
+    margin-bottom: 2em;
+}
+
+#all-images-captions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#all-images-captions a {
+    text-decoration: none;
+    color: black;
+}
+
+#photo-and-caption {
+    text-align: center;
+    width: 20em;
+    padding-bottom: 1.3em;
+    border-radius: 1em;
+}
+
+#photo-and-caption img {
+    width: 20em;
+    height: auto;
+    border-radius: 1em;
+}

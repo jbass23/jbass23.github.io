@@ -101,6 +101,10 @@ h1 {
     color: black;
 }
 
+#all-images-captions a:hover {
+    color: #678A6B;
+}
+
 #photo-and-caption {
     text-align: center;
     width: 20em;

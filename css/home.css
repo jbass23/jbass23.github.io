@@ -46,6 +46,10 @@
     color: white;
 }
 
+#all-images-captions a:hover {
+    color: #95B890;
+}
+
 #photo-and-caption {
     text-align: center;
     width: 20em;
@@ -126,6 +130,10 @@
 
 #contact-text a {
     color: white;
+}
+
+#contact-text a:hover {
+    color: #95B890;
 }
 
 #contact img {

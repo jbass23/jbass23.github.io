@@ -104,12 +104,25 @@ h1 {
 #photo-and-caption {
     text-align: center;
     width: 20em;
-    padding-bottom: 1.3em;
+    padding-bottom: 0.5em;
+    border-radius: 1em;
+}
+
+#photo-and-caption-fixed-height {
+    text-align: center;
+    width: 20em;
+    padding-bottom: 0.5em;
     border-radius: 1em;
 }
 
 #photo-and-caption img {
     width: 20em;
     height: 11.3em;
+    border-radius: 1em;
+}
+
+#photo-and-caption-fixed-height img {
+    height: 11.3em;
+    width: auto;
     border-radius: 1em;
 }

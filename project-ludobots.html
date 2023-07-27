@@ -15,11 +15,19 @@
         </nav>
         <main>
             <h1>Evolving Ludobots via Parallel Hill Climber Method</h1>
-            <div id="company-logos">
-                <a href="https://www.elavon.com" target="_blank" rel="noopener noreferrer">
-                    <img src="files/elavon.png" alt="Elavon's logo" tabindex=5></a>
-                <a href="https://www.usbank.com/index.html" target="_blank" rel="noopener noreferrer">
-                    <img src="files/usbank.png" alt="U.S. Bank's logo" tabindex=6></a>
+            <div id="all-images-captions">
+                <a href="https://github.com/jbass23/mybots" target="_blank" rel="noopener noreferrer">
+                    <div tabindex=5 id="photo-and-caption-fixed-height">
+                        <img src="files/github.png" alt="GitHub's logo">
+                        <h3>Ludobots Github Repo</h3>
+                    </div>
+                </a>
+                <a href="https://youtu.be/K4y3jUs4cLU" target="_blank" rel="noopener noreferrer">
+                    <div tabindex=6 id="photo-and-caption">
+                        <img src="files/ludobots.gif" alt="A GIF of an unevolved and then evolved Ludobot">
+                        <h3>In-Depth Evolution Video</h3>
+                    </div>
+                </a>
             </div>
             <div id="about">
                 <h2>What Are Ludobots?</h2>
@@ -36,7 +44,9 @@
                     These Ludobots are randomly created from scratch; then, their 
                     bodies and brains are evolved over the course of tens or 
                     hundreds of parallel evolutions in order to find the Ludobot 
-                    best suited for locomotion in the negative-X direction.
+                    best suited for locomotion in the negative-X direction. This 
+                    evolution occurs entirely in the background, vastly improving
+                    efficiency.
                 </p>
             </div>
             <div id="las">
@@ -60,45 +70,53 @@
                 </div>
             </div>
             <div id="steps-and-title">
-                <h2>Project Steps</h2>
+                <h2>Evolution Steps</h2>
                 <div id="all-steps">
                     <div id="step">
                         <h3>
-                            1. Save the creation timestamp as a variable within the container 
-                            by updating the container's Dockerfile.
+                            1. Ten Ludobots are generated with completely random bodies and brains.
                         </h3>
                     </div>
                     <div id="step">
                         <h3>
-                            2. Write a method to access the timestamp through a GET call to the 
-                            container's YAML file.
+                            2. Their performance is measured over 1000 'steps' of the simulation.
                         </h3>
                     </div>
                     <div id="step">
                         <h3>
-                            3. After showing proof of concept with Postman, edit every container's 
-                            Dockerfile and YAML file.
+                            3. Various synapses and links are randomly mutated from these ten 
+                            Ludobots, and the evolved Ludobot's performance is measured.
                         </h3>
                     </div>
                     <div id="step">
                         <h3>
-                            4. Write a function to poll all container's and return the timestamps 
-                            for every container in a dictionary.
+                            4. If an evolution improves a Ludobot's performance, it is kept. Else, 
+                            it is scrapped.
                         </h3>
                     </div>
                     <div id="step">
                         <h3>
-                            5. Automate the function to run every 24 hours and notify the team 
-                            when a container hasn't been updated in 90 days.
+                            5. These ten Ludobots all evolve in parallel over the course of 500 
+                            generations.
+                        </h3>
+                    </div>
+                    <div id="step">
+                        <h3>
+                            6. After 500 generations, the best performing Ludobot (of the 5000 
+                            different tested Ludobots) is shown.
                         </h3>
                     </div>
                 </div>
+                <h3>
+                    For 500 generations of ten Ludobots, the full evolution process 
+                    takes my Macbook only 15-20 minutes.
+                </h3>
             </div>
             <div id="other-projects">
                 <h2>Other Projects</h2>
                 <div id="all-images-captions">
                     <a href="project-elavon.html">
-                        <div tabindex=14 id="photo-and-caption">
+                        <div tabindex=12 id="photo-and-caption">
                             <img src="files/elavon-expanded.png" alt="Elavon's logo">
                             <h3>Container Date Monitoring</h3>
                         </div>

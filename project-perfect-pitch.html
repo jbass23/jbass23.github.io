@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>Perfect Pitch</title>
+        <link rel="stylesheet" type="text/css" href="css/general.css">
+        <link rel="stylesheet" type="text/css" href="css/project.css">
+    </head>
+    <body>
+        <nav role=navigation class="top-nav">
+            <ul>
+                <li tabindex=4><a href="index.html#contact">Contact</a></li>
+                <li tabindex=3><a href="index.html#personal-info">Personal Information</a></li>
+                <li tabindex=2><a href="index.html#projects-link">My Projects</a></li>
+                <li tabindex=1><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Perfect Pitch: Soccer Shot-Tracking Technology</h1>
+            <div id="company-logos">
+                <img src="files/perfect-pitch.png" alt="Perfect Pitch's logo" tabindex=5>
+                <img src="files/soccer.gif" alt="A soccer ball highlighted with a green circle" tabindex=6>
+            </div>
+            <div id="about">
+                <h2>About Perfect Pitch</h2>
+                <p>
+                    Perfect Pitch is an app designed to assist soccer players improve their 
+                    game without needing anything more than a ball. We came up with the idea 
+                    with widespread accessibility in mind; not everyone has access to a 
+                    soccer field or a goal to practice. With Perfect Pitch, you wouldn't need 
+                    access to anything other than a soccer ball and a smartphone. The camera 
+                    tracks the soccer ball and gives the user tips to improve their shot speed, 
+                    spin, and other shot statistics. Our project was to illustrate a proof of 
+                    concept for this application, shown in the GIF above; the camera is able to 
+                    find and track the ball, both while stationary and in motion.
+                </p>
+            </div>
+            <div id="las">
+                <h2>Languages & Software Used</h2>
+                <div id="all-images">
+                    <a href="https://www.python.org" target="_blank" rel="noopener noreferrer">
+                        <img src="files/python.png" alt="Python's logo" tabindex=7>
+                    </a>
+                    <a href="https://numpy.org" target="_blank" rel="noopener noreferrer">
+                        <img src="files/numpy.jpg" alt="NumPy's logo" tabindex=8>
+                    </a>
+                    <a href="https://opencv.org" target="_blank" rel="noopener noreferrer">
+                        <img src="files/opencv.png" alt="OpenCV's logo" tabindex=9>
+                    </a>
+                </div>
+            </div>
+            <div id="steps-and-title">
+                <h2>Ball-Tracking Process</h2>
+                <div id="all-steps">
+                    <div id="step">
+                        <h3>
+                            1. Start capturing video in a low resolution to improve efficiency.
+                        </h3>
+                    </div>
+                    <div id="step">
+                        <h3>
+                            2. Reduce noise in the capture by making the video grayscale, then 
+                            applying a Gaussian blur.
+                        </h3>
+                    </div>
+                    <div id="step">
+                        <h3>
+                            3. Get a list of all found circles in the image.
+                        </h3>
+                    </div>
+                    <div id="step">
+                        <h3>
+                            4. Of these circles, select the circle closest to the previous frame's 
+                            circle.
+                        </h3>
+                    </div>
+                    <div id="step">
+                        <h3>
+                            5. Draw the selected circle's center point and circumference to outline
+                            the ball, and show the frame on the screen.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div id="other-projects">
+                <h2>Other Projects</h2>
+                <div id="all-images-captions">
+                    <a href="project-elavon.html">
+                        <div tabindex=10 id="photo-and-caption">
+                            <img src="files/elavon-expanded.png" alt="Elavon's logo">
+                            <h3>Container Date Monitoring</h3>
+                        </div>
+                    </a>
+                    <a href="project-ludobots.html">
+                        <div tabindex=11 id="photo-and-caption">
+                            <img src="files/ludobots.gif" alt="A GIF of an unevolved and then evolved Ludobot">
+                            <h3>Ludobot Evolution</h3>
+                        </div>
+                    </a>
+                    <div id="photo-and-caption">
+                        <img src="files/football.gif" alt="Aiming screen from football game">
+                        <h3>Field Goal Video Game</h3>
+                    </div>
+                    <div id="photo-and-caption">
+                        <img src="files/privacy-poster.jpg" alt="A poster presenting findings from our (de)anonymization project">
+                        <h3>(De)Anonymization Project</h3>
+                    </div>
+                    <div id="photo-and-caption">
+                        <img src="files/snap-dep1.png" alt="A cluster of nodes and edges from a graph representing employees">
+                        <h3>Social Networks Analysis</h3>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

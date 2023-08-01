@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title>(De)Anonymization</title>
+        <link rel="stylesheet" type="text/css" href="css/general.css">
+        <link rel="stylesheet" type="text/css" href="css/project.css">
+    </head>
+    <body>
+        <nav role=navigation class="top-nav">
+            <ul>
+                <li tabindex=4><a href="index.html#contact">Contact</a></li>
+                <li tabindex=3><a href="index.html#personal-info">Personal Information</a></li>
+                <li tabindex=2><a href="index.html#projects-link">My Projects</a></li>
+                <li tabindex=1><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Anonymization and Deanonymization of MovieLens Data</h1>
+            <div id="all-images-captions">
+                <a href="files/privacy-poster.pdf" target="_blank" rel="noopener noreferrer">
+                    <div tabindex=5 id="photo-and-caption">
+                        <img src="files/privacy-poster.jpg" alt="A poster presenting findings from our (de)anonymization project">
+                        <h3>Project Poster</h3>
+                    </div>
+                </a>
+                <a href="files/privacy-paper.pdf" target="_blank" rel="noopener noreferrer">
+                    <div tabindex=6 id="photo-and-caption">
+                        <img src="files/privacy-paper.png" alt="A poster presenting findings from our (de)anonymization project">
+                        <h3>Project Paper</h3>
+                    </div>
+                </a>
+            </div>
+            <div id="about">
+                <h2>About the Project</h2>
+                <p>
+                    My group and I sought to find the most effective techniques to 
+                    anonymize a dataset, and we then subsequently tested an algorithm to 
+                    deanonymize the same dataset. Our approach involved utilizing a primary 
+                    dataset from LetterBoxd and supplementing it with an auxiliary dataset 
+                    from MovieLens, where both datasets contain user data, movie information, 
+                    and ratings. In terms of anonymization, Data Generalization ended up 
+                    being the most effective technique of the techniques we chose to test. 
+                    In terms of deanonymization,  we found that when implementing the 
+                    Scoreboard_RH function that was developed by Arvind Narayanan and Vitaly 
+                    Shatiko, we were able to find a few potential matches across the datasets 
+                    with high certainty, showing proof of concept in the effectiveness of the 
+                    algorithm.
+                </p>
+            </div>
+            <div id="las">
+                <h2>Languages & Software Used</h2>
+                <div id="all-images">
+                    <a href="https://www.python.org" target="_blank" rel="noopener noreferrer">
+                        <img src="files/python.png" alt="Python's logo" tabindex=7>
+                    </a>
+                    <a href="https://colab.research.google.com" target="_blank" rel="noopener noreferrer">
+                        <img src="files/colab.png" alt="Google Colab's logo" tabindex=8>
+                    </a>
+                    <a href="https://numpy.org" target="_blank" rel="noopener noreferrer">
+                        <img src="files/numpy.jpg" alt="NumPy's logo" tabindex=9>
+                    </a>
+                    <a href="https://pandas.pydata.org" target="_blank" rel="noopener noreferrer">
+                        <img src="files/pandas.png" alt="Panda's logo" tabindex=10>
+                    </a>
+                </div>
+            </div>
+            <div id="steps-and-title">
+                <h2>Anonymization & Deanonymization Steps</h2>
+                <div id="all-steps">
+                    <div id="step">
+                        <h3>
+                            1. We anonymized the MovieLens dataset using data generalization 
+                            via binning, adding synthetic data, and performing data swapping.
+
+                        </h3>
+                    </div>
+                    <div id="step">
+                        <h3>
+                            2. This anonymization performed very well, as we could not 
+                            deanonymize the data when all three anonymization techniques were 
+                            used.
+                        </h3>
+                    </div>
+                    <div id="step">
+                        <h3>
+                            3. We then attempted to deanonymize only the binned data using 
+                            Narayanan and Shmatikov's Scoreboard_RH function (this would 
+                            take approx. 220 years to run).
+                        </h3>
+                    </div>
+                    <div id="step">
+                        <h3>
+                            4. Next, we reduced the dataset to just 100 users to deanonymize
+                            (approx. 17 years).
+                        </h3>
+                    </div>
+                    <div id="step">
+                        <h3>
+                            5. We additionally filtered to only match using the 10,000 least 
+                            common films, which resulted in no matches.
+                        </h3>
+                    </div>
+                    <div id="step">
+                        <h3>
+                            6. We then tried using only the 100 most common films, which 
+                            resulted in no users being filtered out.
+                        </h3>
+                    </div>
+                    <div id="step">
+                        <h3>
+                            7. Finally, after relaxing the Scoreboard_RH function and 
+                            reducing the dataset to only five users, we were able to match 
+                            all five across the datasets.
+                        </h3>
+                    </div>
+                    <div id="step">
+                        <h3>
+                            Our conclusion is that when a large, sparse dataset is appropriately
+                            anonymized, it is <i>extremely</i> difficult to deanonymize.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div id="other-projects">
+                <h2>Other Projects</h2>
+                <div id="all-images-captions">
+                    <a href="project-elavon.html">
+                        <div tabindex=11 id="photo-and-caption">
+                            <img src="files/elavon-expanded.png" alt="Elavon's logo">
+                            <h3>Container Date Monitoring</h3>
+                        </div>
+                    </a>
+                    <a href="project-ludobots.html">
+                        <div tabindex=12 id="photo-and-caption">
+                            <img src="files/ludobots.gif" alt="A GIF of an unevolved and then evolved Ludobot">
+                            <h3>Ludobot Evolution</h3>
+                        </div>
+                    </a>
+                    <a href="project-perfect-pitch.html">
+                        <div tabindex=13 id="photo-and-caption">
+                            <img src="files/soccer.gif" alt="A soccer ball highlighted with a green circle">
+                            <h3>Perfect Pitch</h3>
+                        </div>
+                    </a>
+                    <a href="project-football.html">
+                        <div tabindex=14 id="photo-and-caption">
+                            <img src="files/football.gif" alt="Aiming screen from football game">
+                            <h3>Field Goal Video Game</h3>
+                        </div>
+                    </a>
+                    <div id="photo-and-caption">
+                        <img src="files/snap-dep1.png" alt="A cluster of nodes and edges from a graph representing employees">
+                        <h3>Social Networks Analysis</h3>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Container Date Monitoring</title>
+        <title>Social Networks Analysis</title>
         <link rel="stylesheet" type="text/css" href="css/general.css">
         <link rel="stylesheet" type="text/css" href="css/project.css">
     </head>
@@ -14,49 +14,58 @@
             </ul>
         </nav>
         <main>
-            <h1>Container Date-Monitoring System at Elavon</h1>
-            <div id="company-logos">
-                <a href="https://www.elavon.com" target="_blank" rel="noopener noreferrer">
-                    <img src="files/elavon.png" alt="Elavon's logo" tabindex=5></a>
-                <a href="https://www.usbank.com/index.html" target="_blank" rel="noopener noreferrer">
-                    <img src="files/usbank.png" alt="U.S. Bank's logo" tabindex=6></a>
+            <h1>An Analysis on an Institution's Social Networks</h1>
+            <div id="all-images-captions">
+                <a href="files/snap_paper.pdf" target="_blank" rel="noopener noreferrer">
+                    <div tabindex=5 id="photo-and-caption-fixed-height">
+                        <img src="files/snap-dep1.png" alt="A cluster of nodes and edges from a graph representing employees">
+                        <h3>Project Paper</h3>
+                    </div>
+                </a>
+                <a href="https://snap.stanford.edu/data/email-Eu-core-temporal.html" target="_blank" rel="noopener noreferrer">
+                    <div tabindex=6 id="photo-and-caption-fixed-height">
+                        <img src="files/snap-data.png" alt="SNAP's logo">
+                        <h3>Source Data</h3>
+                    </div>
+                </a>
             </div>
             <div id="about">
-                <h2>About Elavon</h2>
+                <h2>About the Project</h2>
                 <p>
-                    Elavon Inc. is a credit card transaction processing company based 
-                    in Atlanta, Georgia. It is a subsidiary of U.S. Bancorp and one of 
-                    the largest credit card processors in the United States. As a 
-                    software development intern at Elavon during the summer of 2022, I worked on  
-                    the Converge2.0 back-end team, where my role was to create a system 
-                    that monitors the date of creation for all of the company's 
-                    containers.
+                    In this project, my group was tasked with finding a suitable social 
+                    network and its corresponding dataset and coming up with a story for 
+                    what this social network was hoping to accomplish. In our case, we 
+                    found a dataset that shows an anonymous European research institution 
+                    as a social network, where each node is an employee and each edge is 
+                    an instance of an email being sent from one employee to another at a 
+                    given timestamp (making it a directed temporal graph). Our scenario 
+                    was that the president of this institution has a hard time organizing 
+                    social events and came to us to figure out what an efficient way to 
+                    organize social events would be, while still making sure employees 
+                    attended.
+                </p>
+                <p>
+                    To accomplish this, we sought to answer a few questions: Which 
+                    employee(s) in the network have the highest centrality? Are there 
+                    employees who rarely, if ever, contact colleagues either within or 
+                    outside their department? And what factors contribute to the 
+                    formation or dissolution of ties between employees in the network?
+                    By answering these questions, we hoped to find which employees spread 
+                    news throughout the network the fastest, and thus which employees to 
+                    inform first about social events. 
                 </p>
             </div>
             <div id="las">
                 <h2>Languages & Software Used</h2>
                 <div id="all-images">
-                    <a href="https://www.java.com/en/" target="_blank" rel="noopener noreferrer">
-                        <img src="files/java.png" alt="Java's logo" tabindex=7>
+                    <a href="https://www.r-project.org" target="_blank" rel="noopener noreferrer">
+                        <img src="files/r.png" alt="R's logo" tabindex=7>
                     </a>
-                    <a href="https://www.docker.com" target="_blank" rel="noopener noreferrer">
-                        <img src="files/docker.webp" alt="Docker's logo" tabindex=8>
+                    <a href="https://r.igraph.org" target="_blank" rel="noopener noreferrer">
+                        <img src="files/igraph.webp" alt="IGraph's logo" tabindex=8>
                     </a>
-                    <a href="https://spring.io/projects/spring-boot" target="_blank" 
-                     rel="noopener noreferrer">
-                        <img src="files/springboot.jpeg" alt="Spring Boot's logo" tabindex=9>
-                    </a>
-                    <a href="https://yaml.org" target="_blank" rel="noopener noreferrer">
-                        <img src="files/yaml.png" alt="YAML's logo" tabindex=10>
-                    </a>
-                    <a href="https://maven.apache.org" target="_blank" rel="noopener noreferrer">
-                        <img src="files/maven.png" alt="Apache Maven's logo" tabindex=11>
-                    </a>
-                    <a href="https://www.postman.com" target="_blank" rel="noopener noreferrer">
-                        <img src="files/postman.png" alt="Postman's logo" tabindex=12>
-                    </a>
-                    <a href="https://bitbucket.org" target="_blank" rel="noopener noreferrer">
-                        <img src="files/bitbucket.png" alt="Bitbucket's logo" tabindex=13>
+                    <a href="https://statnet.org" target="_blank" rel="noopener noreferrer">
+                        <img src="files/statnet.png" alt="Statnet's logo" tabindex=9>
                     </a>
                 </div>
             </div>
@@ -65,32 +74,41 @@
                 <div id="all-steps">
                     <div id="step">
                         <h3>
-                            1. Save the creation timestamp as a variable within the container 
-                            by updating the container's Dockerfile.
+                            1. Take the directed temporal graph and flatten it to a directed
+                            weighted static graph, where the weight is the number of times 
+                            an employee sends the other employee an email.
                         </h3>
                     </div>
                     <div id="step">
                         <h3>
-                            2. Write a method to access the timestamp through a GET call to the 
-                            container's YAML file.
+                            2. Calculate the in-degree, out-degree, betweenness, in-closeness, 
+                            out-closeness, and hub score for all nodes. 
                         </h3>
                     </div>
                     <div id="step">
                         <h3>
-                            3. After showing proof of concept with Postman, edit every container's 
-                            Dockerfile and YAML file.
+                            3. Find the nodes with the highest ranking in all the previously 
+                            mentioned metrics and plot the distribution and log-log plots of 
+                            both in-degree and out-degree. This answers question 1.
                         </h3>
                     </div>
                     <div id="step">
                         <h3>
-                            4. Write a function to poll all container's and return the timestamps 
-                            for every container in a dictionary.
+                            4. Plot the graphs of each of the four departments within the 
+                            whole network. This answers question 2. 
                         </h3>
                     </div>
                     <div id="step">
                         <h3>
-                            5. Automate the function to run every 24 hours and notify the team 
-                            when a container hasn't been updated in 90 days.
+                            5. Take the temporal graph to create a Relational Event Model 
+                            (REM), which finds causation within a network.
+                        </h3>
+                    </div>
+                    <div id="step">
+                        <h3>
+                            6. Determine if email repetition, email reciprocation, and 
+                            degree of connectivity have a positive impact on whether or not 
+                            an email will be sent. This answers question 3.
                         </h3>
                     </div>
                 </div>
@@ -98,34 +116,36 @@
             <div id="other-projects">
                 <h2>Other Projects</h2>
                 <div id="all-images-captions">
+                    <a href="project-elavon.html">
+                        <div tabindex=10 id="photo-and-caption">
+                            <img src="files/elavon-expanded.png" alt="Elavon's logo">
+                            <h3>Container Date Monitoring</h3>
+                        </div>
+                    </a>
                     <a href="project-ludobots.html">
-                        <div tabindex=14 id="photo-and-caption">
+                        <div tabindex=11 id="photo-and-caption">
                             <img src="files/ludobots.gif" alt="A GIF of an unevolved and then evolved Ludobot">
                             <h3>Ludobot Evolution</h3>
                         </div>
                     </a>
                     <a href="project-perfect-pitch.html">
-                        <div tabindex=15 id="photo-and-caption">
+                        <div tabindex=12 id="photo-and-caption">
                             <img src="files/soccer.gif" alt="A soccer ball highlighted with a green circle">
                             <h3>Perfect Pitch</h3>
                         </div>
                     </a>
                     <a href="project-football.html">
-                        <div tabindex=16 id="photo-and-caption">
+                        <div tabindex=13 id="photo-and-caption">
                             <img src="files/football.gif" alt="Aiming screen from football game">
                             <h3>Field Goal Video Game</h3>
                         </div>
                     </a>
                     <a href="project-privacy.html">
-                        <div tabindex=17 id="photo-and-caption">
+                        <div tabindex=14 id="photo-and-caption">
                             <img src="files/privacy-poster.jpg" alt="A poster presenting findings from our (de)anonymization project">
                             <h3>(De)Anonymization Project</h3>
                         </div>
                     </a>
-                    <div id="photo-and-caption">
-                        <img src="files/snap-dep1.png" alt="A cluster of nodes and edges from a graph representing employees">
-                        <h3>Social Networks Analysis</h3>
-                    </div>
                 </div>
             </div>
         </main>
